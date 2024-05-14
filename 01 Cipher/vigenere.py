@@ -1,3 +1,5 @@
+# String Manipulation by Building the Vigenere Cipher
+
 text = 'mrttaqrhknsw ih puggrur'
 custom_key = 'happycoding'
 

@@ -1,5 +1,4 @@
-# Explore the power of Lambda Functions by creating an expense tracker
-# freeCodeCamp project
+# Lambda Functions by creating an Expense Tracker
 
 def add_expense(expenses, amount, category):
     expenses.append({'amount': amount, 'category': category})

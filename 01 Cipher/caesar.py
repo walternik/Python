@@ -1,4 +1,4 @@
-# freeCodeCamp project for Building the Ceasar Cipher
+# String Manipulation by Building the Ceasar Cipher
 
 text = 'Hello Zaira'
 shift = 3

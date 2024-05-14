@@ -1,3 +1,6 @@
+# Algorithm Design by building Shortest Path Algorithm
+# with dictionary comprehensions
+
 my_graph = {
     'A': [('B', 5), ('C', 3), ('E', 11)],
     'B': [('A', 5), ('C', 1), ('F', 2)],

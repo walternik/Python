@@ -1,5 +1,5 @@
-# Password generator
-# freeCodeCamp project
+# Regular Expressions by building a Password generator
+
 import secrets
 import string
 

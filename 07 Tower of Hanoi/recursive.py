@@ -1,5 +1,5 @@
-# Tower of Hanoi recursive approach
-# freeCodeCamp project
+# Recursion by solving the Tower of Hanoi - recursive approach
+
 NUMBER_OF_DISKS = 3
 A = list(range(NUMBER_OF_DISKS, 0, -1))
 B = []

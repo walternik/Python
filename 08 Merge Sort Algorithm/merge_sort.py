@@ -1,6 +1,6 @@
-# Merge Sort Algorithm
+# Data Structures by building the Merge Sort Algorithm
 # This is a sorting algorithm based on the divide and conquer principle
-# freeCodeCamp project
+
 def merge_sort(array):
     if len(array) <= 1:
         return

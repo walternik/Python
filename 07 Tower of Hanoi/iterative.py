@@ -1,5 +1,5 @@
-# Tower of Hanoi iterative approach
-# freeCodeCamp project
+# Recursion by solving the Tower of Hanoi - iterative approach
+
 NUMBER_OF_DISKS = 3
 number_of_moves = 2**NUMBER_OF_DISKS - 1
 rods = {

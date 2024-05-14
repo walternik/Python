@@ -1,7 +1,7 @@
-# Password generator
-# freeCodeCamp project
+# Regular Expressions by building a Password generator
 # A regular expression is a pattern used to match a
 # specific combination of characters inside a string
+
 import re
 import secrets
 import string

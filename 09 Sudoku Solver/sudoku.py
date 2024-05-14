@@ -1,6 +1,7 @@
-# Building Sudoku Solver
-# How to use classes and objects to build a Sudoku grid and to solve a Sudoku puzzle
-# freeCodeCamp project
+# Classes and Objects by building the Sudoku Solver
+# These help developers to achieve code modularity, abstraction, and readability.
+# And they promote reusability.
+
 class Board:
     def __init__(self, board):
         self.board = board
@@ -60,7 +61,7 @@ class Board:
         return True
 
     def is_valid(self, empty, num):
-        row, col = empty
+        row, col = empty # unpack the tuple
         valid_in_row = self.valid_in_row(row, num)
         valid_in_col = self.valid_in_col(col, num)
         valid_in_square = self.valid_in_square(row, col, num)

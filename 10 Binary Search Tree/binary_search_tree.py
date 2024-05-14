@@ -1,3 +1,7 @@
+# Tree traversal by building a Binary Search Tree
+# Perform an in-order traversal.
+# Key operations like insertion, search, and deletion.
+
 class TreeNode:
     def __init__(self, key):
         self.key = key
