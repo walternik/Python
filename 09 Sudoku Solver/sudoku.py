@@ -5,8 +5,16 @@
 class Board:
     def __init__(self, board):
         self.board = board
-
+    
     def __str__(self):
+        board_str = ''
+        for row in self.board:
+            row_str = [str(i) if i else '*' for i in row]
+            board_str += ' '.join(row_str)
+            board_str += '\n'
+        return board_str
+
+    '''def __str__(self):
         upper_lines = f'\n╔═══{"╤═══"*2}{"╦═══"}{"╤═══"*2}{"╦═══"}{"╤═══"*2}╗\n'
         middle_lines = f'╟───{"┼───"*2}{"╫───"}{"┼───"*2}{"╫───"}{"┼───"*2}╢\n'
         lower_lines = f'╚═══{"╧═══"*2}{"╩═══"}{"╧═══"*2}{"╩═══"}{"╧═══"*2}╝\n'
@@ -18,11 +26,9 @@ class Board:
                 row_list.extend(row_square)
                 if square_no != 3:
                     row_list.append('║')
-
             row = f'║ {" ".join(row_list)} ║\n'
             row_empty = row.replace('0', ' ')
             board_string += row_empty
-
             if index < 8:
                 if index % 3 == 2:
                     board_string += f'╠═══{"╪═══"*2}{"╬═══"}{"╪═══"*2}{"╬═══"}{"╪═══"*2}╣\n'
@@ -30,8 +36,7 @@ class Board:
                     board_string += middle_lines
             else:
                 board_string += lower_lines
-
-        return board_string
+        return board_string'''
 
     def find_empty_cell(self):
         for row, contents in enumerate(self.board):
@@ -70,26 +75,22 @@ class Board:
     def solver(self):
         if (next_empty := self.find_empty_cell()) is None:
             return True
-        else:
-            for guess in range(1, 10):
-                if self.is_valid(next_empty, guess):
-                    row, col = next_empty
-                    self.board[row][col] = guess
-                    if self.solver():
-                        return True
-                    self.board[row][col] = 0
-
+        for guess in range(1, 10):
+            if self.is_valid(next_empty, guess):
+                row, col = next_empty
+                self.board[row][col] = guess
+                if self.solver():
+                    return True
+                self.board[row][col] = 0
         return False
 
 def solve_sudoku(board):
     gameboard = Board(board)
-    print(f'\nPuzzle to solve:\n{gameboard}')
+    print(f'Puzzle to solve:\n{gameboard}')
     if gameboard.solver():
-        print('\nSolved puzzle:')
-        print(gameboard)
-
+        print(f'Solved puzzle:\n{gameboard}')
     else:
-        print('\nThe provided puzzle is unsolvable.')
+        print('The provided puzzle is unsolvable.')
     return gameboard
 
 puzzle = [
